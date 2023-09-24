@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KroppensHyllning.API", "KroppensHyllning.API\KroppensHyllning.API.csproj", "{EB77C366-08BB-451A-9AC8-3A73FF4E9AA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KroppensHyllning.Application", "KroppensHyllning.Application\KroppensHyllning.Application.csproj", "{EB9513BB-6C16-4D27-88AE-39C81F8D64F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KroppensHyllning.Contracts", "KroppensHyllning.Contracts\KroppensHyllning.Contracts.csproj", "{C0ECF52B-5E57-4753-A1E1-46E11883C77B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EB77C366-08BB-451A-9AC8-3A73FF4E9AA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB77C366-08BB-451A-9AC8-3A73FF4E9AA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB77C366-08BB-451A-9AC8-3A73FF4E9AA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB77C366-08BB-451A-9AC8-3A73FF4E9AA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB9513BB-6C16-4D27-88AE-39C81F8D64F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB9513BB-6C16-4D27-88AE-39C81F8D64F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB9513BB-6C16-4D27-88AE-39C81F8D64F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB9513BB-6C16-4D27-88AE-39C81F8D64F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0ECF52B-5E57-4753-A1E1-46E11883C77B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0ECF52B-5E57-4753-A1E1-46E11883C77B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0ECF52B-5E57-4753-A1E1-46E11883C77B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0ECF52B-5E57-4753-A1E1-46E11883C77B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
