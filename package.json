@@ -1,0 +1,22 @@
+{
+  "name": "kroppens-hyllning",
+  "version": "0.0.0",
+  "description": "Web API written in .NET Core",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syradar/kroppens-hyllning.git"
+  },
+  "keywords": [
+    "dotnet",
+    "dotnetcore",
+    "api",
+    "webapi"
+  ],
+  "author": "David Malmström",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/syradar/kroppens-hyllning/issues"
+  },
+  "homepage": "https://github.com/syradar/kroppens-hyllning#readme"
+}
