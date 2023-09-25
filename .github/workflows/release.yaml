@@ -17,8 +17,15 @@ jobs:
         with:
           persist-credentials: false
           token: ${{ secrets.RELEASE_PUSH_ACCESS }}
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: 'npm'
+      - name: Install Dependencies
+        run: npm run install:ci
       - name: Semantic Release
-        uses: cycjimmy/semantic-release-action@v4
+        run: npm run semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.RELEASE_PUSH_ACCESS }}
           NPM_TOKEN: ${{ secrets.DUMMY_NPM_TOKEN }}
