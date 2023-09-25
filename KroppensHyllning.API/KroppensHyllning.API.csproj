@@ -17,6 +17,7 @@
         <ProjectReference Include="..\KroppensHyllning.Contracts\KroppensHyllning.Contracts.csproj"/>
     </ItemGroup>
 
+
     <Target Name="CopyCustomContent" AfterTargets="AfterBuild">
         <ItemGroup>
             <_CustomFiles Include="..\commit-msg"/>
