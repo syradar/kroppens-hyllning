@@ -2,7 +2,10 @@
   "name": "kroppens-hyllning",
   "version": "0.0.0",
   "description": "Web API written in .NET Core",
-  "scripts": {},
+  "scripts": {
+    "install:ci": "npm ci --ignore-scripts",
+    "semantic-release": "semantic-release"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/syradar/kroppens-hyllning.git"
@@ -18,5 +21,55 @@
   "bugs": {
     "url": "https://github.com/syradar/kroppens-hyllning/issues"
   },
-  "homepage": "https://github.com/syradar/kroppens-hyllning#readme"
+  "homepage": "https://github.com/syradar/kroppens-hyllning#readme",
+  "private": true,
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.6",
+    "@commitlint/config-conventional": "^17.6.6",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^10.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/npm": "^10.0.4",
+    "@semantic-release/release-notes-generator": "^11.0.3",
+    "cz-conventional-changelog": "^3.3.0",
+    "last-release-git": "^0.0.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
+    [
+      "@semantic-release/npm",
+      {
+        "npmPublish": false
+      }
+    ],
+    [
+      "@semantic-release/git",
+      {
+        "assets": [
+          "package.json",
+          "package-lock.json",
+          "CHANGELOG.md"
+        ],
+        "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+      }
+    ],
+    "@semantic-release/github"
+  ],
+  "release": {
+    "branches": [
+      "main"
+    ]
+  }
 }
