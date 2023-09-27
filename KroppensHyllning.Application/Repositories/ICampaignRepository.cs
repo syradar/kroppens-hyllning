@@ -7,6 +7,7 @@ public interface ICampaignRepository
     Task<bool> CreateAsync(Campaign campaign);
 
     Task<Campaign?> GetByIdAsync(Guid id);
+    Task<Campaign?> GetBySlugAsync(string slug);
 
     Task<IEnumerable<Campaign>> GetAllAsync();
 

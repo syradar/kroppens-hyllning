@@ -19,6 +19,12 @@ public class CampaignRepository : ICampaignRepository
         return Task.FromResult(campaign);
     }
 
+    public Task<Campaign?> GetBySlugAsync(string slug)
+    {
+        var campaign = _campaigns.FirstOrDefault(c => c.Slug == slug);
+        return Task.FromResult(campaign);
+    }
+
     public Task<IEnumerable<Campaign>> GetAllAsync()
     {
         return Task.FromResult(_campaigns.AsEnumerable());

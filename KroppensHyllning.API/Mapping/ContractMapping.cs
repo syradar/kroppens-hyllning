@@ -35,6 +35,7 @@ public static class ContractMapping
             Id = campaign.Id,
             Name = campaign.Name,
             StartYear = campaign.StartYear,
+            Slug = campaign.Slug,
             Tags = campaign.Tags
         };
     }

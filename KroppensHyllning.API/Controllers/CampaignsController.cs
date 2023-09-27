@@ -23,16 +23,18 @@ public class CampaignsController : ControllerBase
         await _campaignRepository.CreateAsync(campaign);
         return CreatedAtAction(
             nameof(Get),
-            new {id = campaign.Id},
+            new {idOrSlug = campaign.Id},
             campaign.MapToResponse()
         );
     }
 
     [HttpGet]
     [Route(ApiEndpoints.Campaigns.Get)]
-    public async Task<IActionResult> Get([FromRoute] Guid id)
+    public async Task<IActionResult> Get([FromRoute] string idOrSlug)
     {
-        var campaign = await _campaignRepository.GetByIdAsync(id);
+        var campaign = Guid.TryParse(idOrSlug, out var id)
+            ? await _campaignRepository.GetByIdAsync(id)
+            : await _campaignRepository.GetBySlugAsync(idOrSlug);
         if (campaign is null) return NotFound();
         var response = campaign.MapToResponse();
         return Ok(response);
