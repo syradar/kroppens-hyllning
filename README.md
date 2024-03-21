@@ -5,6 +5,8 @@ _The Body's Celebration_ is in stark contrast to Yxans Klagan _The Axe's Lamenta
 This is a Restful API built in C# using .Net Core for managing a Forbidden Lands RPG campaign, this would be used
 by https://github.com/syradar/yxans-klagan to render the UI.
 
+Course: https://dometrain.com/course/from-zero-to-hero-rest-apis-in-asp-net-core/
+
 ## Features
 
 - [X] Manage Campaigns, CRUD
